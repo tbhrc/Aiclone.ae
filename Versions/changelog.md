@@ -1,3 +1,8 @@
+Version 1.0:
+Initial Single Page Version
+- Single HTML file implementation (aiclone-v1-madde-by-claudecode.html)
+- Basic structure and design
+
 Version 1.1:
 Sections Implemented
 Hero Section – "Your Digital AI Twin in 72 hours" with dual CTAs
@@ -18,4 +23,10 @@ FAQ – 6 accordion questions with smooth animation
 Application Form – Comprehensive fields including revenue bracket
 Footer – Quick links, legal, contact
 
+
 Version 1.2:
+- Renamed 'David Potgieter.png' to 'david-potgieter.png' for consistent asset naming
+- Clarified deliverables to include "Access to software" 
+- Added 'database_setup.sql' for application/lead storage
+- Added 'admin/login.html' dashboard mockup (no-auth for now)
+- Added 'robots.txt' to block admin indexing
