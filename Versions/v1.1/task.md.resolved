@@ -1,0 +1,33 @@
+# AIClone.ae Website Improvement Task
+
+## Objective
+Review two existing website implementations and create an improved, deployment-ready version following brand guidelines.
+
+## Phase 1: Research & Analysis
+- [x] Explore folder structure and identify websites
+- [x] Read Brand Voice document ([AIClone_Brand_Voice_v1_.md](file:///c:/Users/TalentBridgeDubai/OneDrive%20-%20Talent%20Bridge%20HR%20Consultancy/Aiclone.ae/Docs/AIClone_Brand_Voice_v1_.md))
+- [x] Read Website Architecture document ([AIClone_Website_Architecture_v1_FULL.md](file:///c:/Users/TalentBridgeDubai/OneDrive%20-%20Talent%20Bridge%20HR%20Consultancy/Aiclone.ae/Docs/AIClone_Website_Architecture_v1_FULL.md))
+- [x] Read Business Research Brief, PRD, GTM Strategy
+- [x] Review PHP website ([Website-v1.php](file:///c:/Users/TalentBridgeDubai/OneDrive%20-%20Talent%20Bridge%20HR%20Consultancy/Aiclone.ae/AiClone.ae/Website-v1.php))
+- [x] Review Claude HTML website ([aiclone-v1-madde-by-claudecode.html](file:///c:/Users/TalentBridgeDubai/OneDrive%20-%20Talent%20Bridge%20HR%20Consultancy/Aiclone.ae/AiClone.ae/aiclone-v1-madde-by-claudecode.html))
+- [x] Compare strengths/weaknesses of both implementations
+
+## Phase 2: Planning
+- [x] Create implementation plan document
+- [x] Get user approval on plan
+
+## Phase 3: Development
+- [x] Create improved website structure
+- [x] Implement hero section with brand messaging
+- [x] Implement BIVV process section
+- [x] Implement pricing tiers section (3 tiers: AED 25K/45K/75K)
+- [x] Implement FAQ section with accordions
+- [x] Implement application/waitlist form
+- [x] Implement responsive navigation
+- [x] Add all required CTAs
+
+## Phase 4: Verification
+- [x] Test in browser (all sections render correctly)
+- [x] Verify scroll and interactive elements work
+- [x] Validate brand consistency (Royal Futurist theme)
+- [x] Create walkthrough document

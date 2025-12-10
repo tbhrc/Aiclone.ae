@@ -1,4 +1,4 @@
-# AIClone.ae Multi-Page Website Structure
+And also if there was any changes made to the PRD, then just create another version 1.2 because we are now at version 1.2. All the changes you've made earlier count as version 1.2.# AIClone.ae Multi-Page Website Structure
 
 ## Proposed Folder Structure
 
