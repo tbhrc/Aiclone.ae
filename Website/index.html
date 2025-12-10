@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <title>AIClone.ae – 72 Hour Digital AI Twin in Dubai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AIClone.ae creates a handcrafted Digital AI Twin for Dubai founders, CEOs and leaders in 72 hours. Grow your brand without recording again.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            midnight: '#0F172A',
+            obsidian: '#0A0A0A',
+            softgold: '#D4AF37',
+            slateglass: 'rgba(15,23,42,0.85)'
+          },
+          boxShadow: { 'glow-gold': '0 0 40px rgba(212,175,55,0.35)' },
+          keyframes: {
+            float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } }
+          },
+          animation: { float: 'float 6s ease-in-out infinite' }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { background: #0A0A0A; font-family: 'Inter', sans-serif; }
+    .glass { background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.6)); border: 1px solid rgba(148,163,184,0.2); backdrop-filter: blur(16px); }
+    .gold-border { border: 1px solid rgba(212,175,55,0.3); }
+    .gradient-text { background: linear-gradient(135deg, #D4AF37 0%, #F4E4C1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .btn-primary { background: linear-gradient(135deg, #D4AF37 0%, #C9A961 100%); color: #0A0A0A; font-weight: 600; padding: 0.875rem 2rem; border-radius: 9999px; transition: all 0.3s; display: inline-block; text-decoration: none; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(212,175,55,0.4); }
+    .btn-secondary { background: transparent; color: #D4AF37; border: 2px solid #D4AF37; font-weight: 600; padding: 0.75rem 2rem; border-radius: 9999px; transition: all 0.3s; display: inline-block; text-decoration: none; }
+    .btn-secondary:hover { background: rgba(212,175,55,0.1); transform: translateY(-2px); }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s, transform 0.7s; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .accordion-content.active { max-height: 500px; }
+    input, textarea, select { background: rgba(15,23,42,0.6); border: 1px solid rgba(212,175,55,0.3); color: #E2E8F0; padding: 0.75rem 1rem; border-radius: 0.5rem; width: 100%; transition: all 0.3s; }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: #D4AF37; box-shadow: 0 0 0 3px rgba(212,175,55,0.15); }
+  </style>
+</head>
+<body class="text-slate-100 antialiased">
+
+  <!-- Background Decorations -->
+  <div class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-48 left-1/2 h-96 w-[40rem] -translate-x-1/2 rounded-full bg-gradient-radial from-softgold/20 to-transparent blur-3xl opacity-60"></div>
+    <div class="absolute bottom-0 left-0 h-[25rem] w-[25rem] bg-gradient-radial from-blue-500/15 to-transparent blur-3xl opacity-50"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header id="navbar" class="sticky top-0 z-50 border-b border-slate-800/70 bg-slateglass backdrop-blur-xl">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 lg:px-6">
+      <a href="#" class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-softgold via-softgold/70 to-amber-200 shadow-glow-gold">
+          <span class="text-lg font-bold text-obsidian">AI</span>
+        </div>
+        <div class="flex flex-col leading-tight">
+          <span class="text-sm font-semibold tracking-widest text-slate-100 uppercase">AIClone.ae</span>
+          <span class="text-xs text-slate-400">72 Hour Digital AI Twins</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#offer" class="hover:text-softgold transition">Offer</a>
+        <a href="#process" class="hover:text-softgold transition">72-Hour Process</a>
+        <a href="#pricing" class="hover:text-softgold transition">Pricing</a>
+        <a href="#founder" class="hover:text-softgold transition">Founder</a>
+        <a href="#faq" class="hover:text-softgold transition">FAQ</a>
+      </nav>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#waitlist" class="btn-secondary text-xs uppercase tracking-wider">Join Waitlist</a>
+        <a href="#apply" class="btn-primary text-xs uppercase tracking-wider">Apply for Your Twin</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-slate-200 p-2"><i data-lucide="menu" class="w-6 h-6"></i></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-obsidian/95 px-4 py-4 space-y-3">
+      <a href="#offer" class="block py-1 text-slate-300">Offer</a>
+      <a href="#process" class="block py-1 text-slate-300">72-Hour Process</a>
+      <a href="#pricing" class="block py-1 text-slate-300">Pricing</a>
+      <a href="#founder" class="block py-1 text-slate-300">Founder</a>
+      <a href="#faq" class="block py-1 text-slate-300">FAQ</a>
+      <div class="pt-3 flex flex-col gap-2">
+        <a href="#apply" class="btn-primary text-center text-xs uppercase tracking-wider">Apply for Your Twin</a>
+        <a href="#waitlist" class="btn-secondary text-center text-xs uppercase tracking-wider">Join Waitlist</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 pt-10 pb-20 lg:px-6">
+
+    <!-- HERO SECTION -->
+    <section id="offer" class="relative py-16 lg:py-24 fade-in">
+      <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+        <div class="space-y-6">
+          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-softgold/90">Dubai • Digital AI Twin • 72 Hours</p>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white">
+            Your Digital AI Twin in <span class="gradient-text">seventy two hours</span>
+          </h1>
+          <p class="text-lg text-slate-300 max-w-xl">
+            A private, white-glove service in Dubai that captures your brain, voice and presence once — then lets your Digital AI Twin speak for you everywhere.
+          </p>
+          <p class="text-xl font-medium text-softgold">Grow your brand without ever recording again.</p>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="#apply" class="btn-primary text-sm uppercase tracking-wider flex items-center gap-2">Apply for Your Twin <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            <a href="#waitlist" class="btn-secondary text-sm uppercase tracking-wider">Join the Waitlist</a>
+          </div>
+          <p class="text-xs uppercase tracking-widest text-slate-500">One client per 72-hour block • Limited availability</p>
+        </div>
+        <div class="glass rounded-3xl p-6 border border-softgold/20 shadow-2xl">
+          <div class="grid grid-cols-3 gap-4 text-center mb-6">
+            <div class="rounded-2xl border border-slate-700 bg-slate-900/70 p-4">
+              <p class="text-2xl font-bold text-softgold">72h</p>
+              <p class="text-xs uppercase tracking-wider text-slate-400">Full Build</p>
+            </div>
+            <div class="rounded-2xl border border-slate-700 bg-slate-900/70 p-4">
+              <p class="text-2xl font-bold text-softgold">1</p>
+              <p class="text-xs uppercase tracking-wider text-slate-400">Client at a Time</p>
+            </div>
+            <div class="rounded-2xl border border-slate-700 bg-slate-900/70 p-4">
+              <p class="text-2xl font-bold text-softgold">Dubai</p>
+              <p class="text-xs uppercase tracking-wider text-slate-400">Villa • Office • Jet</p>
+            </div>
+          </div>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center gap-3"><div class="h-2 w-2 rounded-full bg-softgold"></div><p><strong class="text-white">Day 1</strong> — Brain and identity extraction</p></div>
+            <div class="flex items-center gap-3"><div class="h-2 w-2 rounded-full bg-softgold/70"></div><p><strong class="text-white">Day 2</strong> — Voice cloning and avatar capture</p></div>
+            <div class="flex items-center gap-3"><div class="h-2 w-2 rounded-full bg-softgold/50"></div><p><strong class="text-white">Day 3</strong> — Calibration, content and handover</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="border-y border-slate-800/80 py-8 fade-in">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400">
+        <p class="uppercase tracking-widest text-slate-500">Trusted by leaders who move fast</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <span class="rounded-full border border-slate-700 px-4 py-2">Dubai Founders & CEOs</span>
+          <span class="rounded-full border border-slate-700 px-4 py-2">Influencers & Coaches</span>
+          <span class="rounded-full border border-slate-700 px-4 py-2">Elite Real Estate</span>
+          <span class="rounded-full border border-slate-700 px-4 py-2">Thought Leaders</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAIN SECTION -->
+    <section class="py-16 fade-in">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Your business depends on your presence.<br><span class="text-slate-400">Your schedule doesn't.</span></h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="glass rounded-3xl p-6 gold-border hover:border-softgold/60 transition">
+          <div class="flex items-center gap-3 mb-4"><i data-lucide="clock" class="w-8 h-8 text-softgold"></i><h3 class="text-xl font-bold gradient-text">Content Treadmill</h3></div>
+          <ul class="space-y-3 text-slate-300">
+            <li class="flex items-start gap-2"><span class="text-softgold mt-1">•</span>"If I don't post X videos a day, my reach dies."</li>
+            <li class="flex items-start gap-2"><span class="text-softgold mt-1">•</span>Every platform wants video. My calendar doesn't.</li>
+            <li class="flex items-start gap-2"><span class="text-softgold mt-1">•</span>Scripting, filming, retakes, editing — for a 60-second clip.</li>
+          </ul>
+        </div>
+        <div class="glass rounded-3xl p-6 gold-border hover:border-softgold/60 transition">
+          <div class="flex items-center gap-3 mb-4"><i data-lucide="brain" class="w-8 h-8 text-softgold"></i><h3 class="text-xl font-bold gradient-text">Stuck Knowledge</h3></div>
+          <ul class="space-y-3 text-slate-300">
+            <li class="flex items-start gap-2"><span class="text-softgold mt-1">•</span>Decades of frameworks and IP stuck in your head or scattered files.</li>
+            <li class="flex items-start gap-2"><span class="text-softgold mt-1">•</span>Want to productise knowledge but never find the time.</li>
+            <li class="flex items-start gap-2"><span class="text-softgold mt-1">•</span>Team keeps asking for content. You keep saying 'later'.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-center text-lg text-slate-300 mt-10 max-w-3xl mx-auto">You're not lazy. You're at the stage where your <span class="gradient-text font-semibold">time is more valuable than being on camera every day</span>.</p>
+    </section>
+
+    <!-- SOLUTION SECTION -->
+    <section class="py-16 fade-in">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Your <span class="gradient-text">Digital AI Twin</span>, handcrafted in 72 hours</h2>
+        <p class="text-lg text-slate-300 max-w-3xl mx-auto">A high-fidelity digital version of you — trained on your ideas, voice and presence — that creates content, teaches, and communicates on your behalf.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass rounded-3xl p-6 text-center gold-border hover:border-softgold/60 transition">
+          <i data-lucide="brain" class="w-12 h-12 text-softgold mx-auto mb-4"></i>
+          <h3 class="text-xl font-bold gradient-text mb-2">Brain</h3>
+          <p class="text-slate-300">We extract your frameworks, stories and language into an AI-ready structure.</p>
+        </div>
+        <div class="glass rounded-3xl p-6 text-center gold-border hover:border-softgold/60 transition">
+          <i data-lucide="mic" class="w-12 h-12 text-softgold mx-auto mb-4"></i>
+          <h3 class="text-xl font-bold gradient-text mb-2">Voice</h3>
+          <p class="text-slate-300">Your voice is cloned with emotional accuracy and natural realism.</p>
+        </div>
+        <div class="glass rounded-3xl p-6 text-center gold-border hover:border-softgold/60 transition">
+          <i data-lucide="video" class="w-12 h-12 text-softgold mx-auto mb-4"></i>
+          <h3 class="text-xl font-bold gradient-text mb-2">Video</h3>
+          <p class="text-slate-300">Your avatar is trained to deliver video content on demand.</p>
+        </div>
+      </div>
+      <p class="text-center text-slate-400 mt-8">This is not a gimmick. It's a serious, controlled asset with strict confidentiality and ownership.</p>
+    </section>
+
+    <!-- BIVV PROCESS SECTION -->
+    <section id="process" class="py-16 fade-in">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">The <span class="gradient-text">BIVV Method</span></h2>
+        <p class="text-lg text-slate-400">Brain, Identity, Voice, Video — in 72 hours</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass rounded-3xl p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-softgold mb-2">Day 1 • Brain</p>
+          <h3 class="text-lg font-bold text-white mb-3">Deep Brain Extraction</h3>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li>• 2-6 hours of guided interview and ideation</li>
+            <li>• Extract frameworks, philosophies, stories and IP</li>
+            <li>• Structure content pillars, signature stories, phrases</li>
+            <li>• Output: Your structured "Brain File"</li>
+          </ul>
+        </div>
+        <div class="glass rounded-3xl p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-softgold mb-2">Day 1 • Identity</p>
+          <h3 class="text-lg font-bold text-white mb-3">Persona & Archetype Mapping</h3>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li>• Define how you want to be seen on screen</li>
+            <li>• Set tonal rules for your Digital AI Twin</li>
+            <li>• Align wardrobe, backdrop and visual cues</li>
+          </ul>
+        </div>
+        <div class="glass rounded-3xl p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-softgold mb-2">Day 2 • Voice</p>
+          <h3 class="text-lg font-bold text-white mb-3">Voice Cloning with Emotional Range</h3>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li>• Read scripts and speak naturally in conversation</li>
+            <li>• Model emotional range: serious, excited, intimate</li>
+            <li>• Create multiple voice profiles if needed</li>
+          </ul>
+        </div>
+        <div class="glass rounded-3xl p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-softgold mb-2">Days 2-3 • Video</p>
+          <h3 class="text-lg font-bold text-white mb-3">Avatar & Scene Creation</h3>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li>• Capture reference angles, lighting, expressions</li>
+            <li>• Train avatar for office, studio, skyline scenes</li>
+            <li>• Calibrate until the twin feels like you</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO THIS IS FOR -->
+    <section class="py-16 fade-in">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold gradient-text mb-6">Who AIClone.ae is for</h3>
+          <ul class="space-y-4 text-slate-300">
+            <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-6 h-6 text-softgold flex-shrink-0 mt-0.5"></i>Founders, CEOs and partners whose <strong>time is their main asset</strong>.</li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-6 h-6 text-softgold flex-shrink-0 mt-0.5"></i>Influencers and coaches whose <strong>income depends on their face and voice</strong>.</li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-6 h-6 text-softgold flex-shrink-0 mt-0.5"></i>Elite performers who want to <strong>scale presence without burnout</strong>.</li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-6 h-6 text-softgold flex-shrink-0 mt-0.5"></i>Early adopters who want an <strong>unfair advantage</strong> in their market.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-slate-500 mb-6">Who this is not for</h3>
+          <ul class="space-y-4 text-slate-400">
+            <li class="flex items-start gap-3"><i data-lucide="x-circle" class="w-6 h-6 text-slate-600 flex-shrink-0 mt-0.5"></i>People looking for a cheap software tool.</li>
+            <li class="flex items-start gap-3"><i data-lucide="x-circle" class="w-6 h-6 text-slate-600 flex-shrink-0 mt-0.5"></i>Those without an existing business, audience or offer.</li>
+            <li class="flex items-start gap-3"><i data-lucide="x-circle" class="w-6 h-6 text-slate-600 flex-shrink-0 mt-0.5"></i>Anyone uncomfortable going deep in a 72-hour process.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section class="py-16 fade-in">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">How leaders use their <span class="gradient-text">Digital AI Twin</span></h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass rounded-3xl p-6 gold-border">
+          <div class="flex items-center gap-3 mb-4"><i data-lucide="briefcase" class="w-8 h-8 text-softgold"></i><h3 class="text-xl font-bold">Founder / CEO</h3></div>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li>• Weekly CEO letters turned into video</li>
+            <li>• Investor updates delivered via twin</li>
+            <li>• Culture and values masterclasses for team</li>
+          </ul>
+        </div>
+        <div class="glass rounded-3xl p-6 gold-border">
+          <div class="flex items-center gap-3 mb-4"><i data-lucide="users" class="w-8 h-8 text-softgold"></i><h3 class="text-xl font-bold">Influencer / Coach</h3></div>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li>• Short-form tips posted daily</li>
+            <li>• Long-form teaching content for courses</li>
+            <li>• Evergreen webinar and upsell videos</li>
+          </ul>
+        </div>
+        <div class="glass rounded-3xl p-6 gold-border">
+          <div class="flex items-center gap-3 mb-4"><i data-lucide="building-2" class="w-8 h-8 text-softgold"></i><h3 class="text-xl font-bold">Real Estate / Elite Sales</h3></div>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li>• Property explainer videos on demand</li>
+            <li>• Authority content on market trends</li>
+            <li>• Automated follow-up videos to leads</li>
+          </ul>
+        </div>
+        <div class="glass rounded-3xl p-6 gold-border">
+          <div class="flex items-center gap-3 mb-4"><i data-lucide="book-open" class="w-8 h-8 text-softgold"></i><h3 class="text-xl font-bold">Author / Thought Leader</h3></div>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li>• Book content repurposed into series</li>
+            <li>• Audio notes turned into lessons</li>
+            <li>• "Office hours" clone videos for FAQs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="py-16 fade-in">
+      <div class="glass rounded-3xl p-8 border border-softgold/20">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">We come to <span class="gradient-text">you</span></h2>
+          <p class="text-lg text-slate-300">Your villa, office, penthouse or private jet.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-8">
+          <div class="glass rounded-2xl p-4 text-center gold-border"><i data-lucide="home" class="w-8 h-8 text-softgold mx-auto mb-2"></i><p class="text-slate-300 text-sm">Villa</p></div>
+          <div class="glass rounded-2xl p-4 text-center gold-border"><i data-lucide="building" class="w-8 h-8 text-softgold mx-auto mb-2"></i><p class="text-slate-300 text-sm">Office</p></div>
+          <div class="glass rounded-2xl p-4 text-center gold-border"><i data-lucide="building-2" class="w-8 h-8 text-softgold mx-auto mb-2"></i><p class="text-slate-300 text-sm">Penthouse</p></div>
+          <div class="glass rounded-2xl p-4 text-center gold-border"><i data-lucide="plane" class="w-8 h-8 text-softgold mx-auto mb-2"></i><p class="text-slate-300 text-sm">Private Jet</p></div>
+        </div>
+        <p class="text-center text-slate-400 max-w-2xl mx-auto">Discreet, minimal crew. Security-aware. The experience feels like a <strong>private consulting intensive</strong>, not a tech demo.</p>
+      </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="py-16 fade-in">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Investment in your <span class="gradient-text">digital legacy</span></h2>
+        <p class="text-lg text-slate-400">Three tiers. One standard of excellence.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass rounded-3xl p-6 gold-border">
+          <p class="text-xs font-semibold uppercase tracking-widest text-softgold mb-2">Tier 1</p>
+          <h3 class="text-2xl font-bold mb-1">72-Hour Clone</h3>
+          <p class="text-3xl font-bold text-white mb-4">From AED 25,000</p>
+          <p class="text-sm text-slate-400 mb-4">For founders ready to scale their presence</p>
+          <ul class="space-y-2 text-sm text-slate-300 mb-6">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>Full BIVV capture over 72 hours</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>One primary avatar environment</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>5-10 foundational videos</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>Basic knowledge base structure</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>Team usage guide</li>
+          </ul>
+          <a href="#apply" class="btn-secondary w-full text-center text-sm">Apply for This Tier</a>
+        </div>
+        <div class="glass rounded-3xl p-6 border-2 border-softgold relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-softgold text-obsidian text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Popular</div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-softgold mb-2">Tier 2</p>
+          <h3 class="text-2xl font-bold mb-1">Executive Twin</h3>
+          <p class="text-3xl font-bold text-white mb-4">From AED 45,000</p>
+          <p class="text-sm text-slate-400 mb-4">For leaders who want robust content engine</p>
+          <ul class="space-y-2 text-sm text-slate-300 mb-6">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>Everything in Tier 1, plus:</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>Multiple avatar environments</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>30-60 prepared scripts</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>CRM & social integration guidance</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>One refinement session</li>
+          </ul>
+          <a href="#apply" class="btn-primary w-full text-center text-sm">Apply for This Tier</a>
+        </div>
+        <div class="glass rounded-3xl p-6 gold-border">
+          <p class="text-xs font-semibold uppercase tracking-widest text-softgold mb-2">Tier 3</p>
+          <h3 class="text-2xl font-bold mb-1">Elite Digital Legacy</h3>
+          <p class="text-3xl font-bold text-white mb-4">From AED 75,000</p>
+          <p class="text-sm text-slate-400 mb-4">For UHNW founders and public figures</p>
+          <ul class="space-y-2 text-sm text-slate-300 mb-6">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>Everything in Tier 2, plus:</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>Private jet / travel session option</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>100+ video library</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>6-12 month deployment roadmap</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-softgold mt-0.5"></i>Priority access to innovations</li>
+          </ul>
+          <a href="#apply" class="btn-secondary w-full text-center text-sm">Apply for This Tier</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ETHICS & CONFIDENTIALITY -->
+    <section class="py-16 fade-in">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Ethics, Safety & <span class="gradient-text">Confidentiality</span></h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="text-center">
+          <i data-lucide="shield-check" class="w-10 h-10 text-softgold mx-auto mb-3"></i>
+          <h3 class="font-bold mb-2">You Own Everything</h3>
+          <p class="text-sm text-slate-400">Voice, avatar and brain file belong to you. Never resold.</p>
+        </div>
+        <div class="text-center">
+          <i data-lucide="lock" class="w-10 h-10 text-softgold mx-auto mb-3"></i>
+          <h3 class="font-bold mb-2">NDA Protection</h3>
+          <p class="text-sm text-slate-400">Work under NDA with custom agreements. Your data is secure.</p>
+        </div>
+        <div class="text-center">
+          <i data-lucide="user-check" class="w-10 h-10 text-softgold mx-auto mb-3"></i>
+          <h3 class="font-bold mb-2">You Control Usage</h3>
+          <p class="text-sm text-slate-400">Decide where and how the twin is used. Set limits on topics.</p>
+        </div>
+        <div class="text-center">
+          <i data-lucide="file-check" class="w-10 h-10 text-softgold mx-auto mb-3"></i>
+          <h3 class="font-bold mb-2">Not a Gimmick</h3>
+          <p class="text-sm text-slate-400">A controlled asset with strict confidentiality protocols.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER SECTION -->
+    <section id="founder" class="py-16 fade-in">
+      <div class="glass rounded-3xl p-8 border border-slate-700">
+        <div class="grid md:grid-cols-3 gap-8 items-center">
+          <div class="flex justify-center">
+            <div class="w-40 h-40 rounded-full gold-border p-1">
+              <div class="w-full h-full rounded-full bg-gradient-to-br from-softgold/30 to-slate-800 flex items-center justify-center">
+                <i data-lucide="user" class="w-16 h-16 text-slate-400"></i>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-2">
+            <p class="text-xs font-semibold uppercase tracking-widest text-softgold mb-2">Founder</p>
+            <h3 class="text-2xl font-bold mb-4">Meet the architect behind <span class="gradient-text">AIClone.ae</span></h3>
+            <p class="text-slate-300 mb-4">David Potgieter has spent decades in recruitment, coaching, and executive consulting — extracting people's stories, career narratives, and frameworks with precision and care.</p>
+            <p class="text-slate-300">AIClone.ae is the natural evolution of that skill, applied to AI-powered identity transformation. The process feels less like a tech demo and more like a founder-to-founder conversation that leaves you seeing your own story with new clarity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-16 fade-in">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Frequently Asked <span class="gradient-text">Questions</span></h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div class="gold-border rounded-xl">
+          <button class="accordion-btn w-full text-left p-5 flex justify-between items-center hover:bg-slate-800/30 transition">
+            <span class="font-bold">How realistic will my Digital AI Twin be?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-softgold transition-transform"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5"><p class="text-slate-300">Your twin uses state-of-the-art voice cloning and avatar technology. Most clients report audiences cannot tell the difference. The 72-hour calibration ensures it feels authentic to you.</p></div>
+        </div>
+        <div class="gold-border rounded-xl">
+          <button class="accordion-btn w-full text-left p-5 flex justify-between items-center hover:bg-slate-800/30 transition">
+            <span class="font-bold">Is this safe and ethical?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-softgold transition-transform"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5"><p class="text-slate-300">Yes. You own your likeness, voice and data. We operate under strict NDA agreements and never resell your data. You control where and how your twin is deployed.</p></div>
+        </div>
+        <div class="gold-border rounded-xl">
+          <button class="accordion-btn w-full text-left p-5 flex justify-between items-center hover:bg-slate-800/30 transition">
+            <span class="font-bold">Who owns the clone and the data?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-softgold transition-transform"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5"><p class="text-slate-300">You own everything — the voice model, avatar, brain file and all generated content. We provide full documentation of ownership rights as part of the engagement.</p></div>
+        </div>
+        <div class="gold-border rounded-xl">
+          <button class="accordion-btn w-full text-left p-5 flex justify-between items-center hover:bg-slate-800/30 transition">
+            <span class="font-bold">Do I need to be technical?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-softgold transition-transform"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5"><p class="text-slate-300">Not at all. The service is designed for busy leaders. Sessions feel like structured conversations. Your team receives a simple playbook to operate the twin.</p></div>
+        </div>
+        <div class="gold-border rounded-xl">
+          <button class="accordion-btn w-full text-left p-5 flex justify-between items-center hover:bg-slate-800/30 transition">
+            <span class="font-bold">Can I update my twin as my frameworks evolve?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-softgold transition-transform"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5"><p class="text-slate-300">Absolutely. Your brain file can be updated as your business and messaging evolve. We offer ongoing support packages for periodic updates and content refresh sessions.</p></div>
+        </div>
+        <div class="gold-border rounded-xl">
+          <button class="accordion-btn w-full text-left p-5 flex justify-between items-center hover:bg-slate-800/30 transition">
+            <span class="font-bold">Do you only work in Dubai?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-softgold transition-transform"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5"><p class="text-slate-300">Dubai and the wider UAE are the primary focus. Select international engagements may be considered on a case-by-case basis where travel and privacy requirements can be met.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section id="apply" class="py-16 fade-in">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Request access to <span class="gradient-text">AIClone.ae</span></h2>
+        <p class="text-lg text-slate-400">One client per 72 hours. Limited availability.</p>
+      </div>
+      <form id="waitlist" class="max-w-2xl mx-auto glass rounded-3xl p-8 border border-softgold/20 space-y-6">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div><label class="block text-sm font-medium mb-2">Full Name *</label><input type="text" required placeholder="Your name"></div>
+          <div><label class="block text-sm font-medium mb-2">Email *</label><input type="email" required placeholder="you@company.com"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div><label class="block text-sm font-medium mb-2">WhatsApp</label><input type="tel" placeholder="+971..."></div>
+          <div><label class="block text-sm font-medium mb-2">Role *</label><input type="text" required placeholder="Founder, CEO, Coach..."></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div><label class="block text-sm font-medium mb-2">Company</label><input type="text" placeholder="Company name"></div>
+          <div><label class="block text-sm font-medium mb-2">Website / LinkedIn</label><input type="url" placeholder="https://..."></div>
+        </div>
+        <div><label class="block text-sm font-medium mb-2">What best describes you? *</label>
+          <select required>
+            <option value="">Select one...</option>
+            <option>Founder / CEO</option>
+            <option>Influencer / Coach</option>
+            <option>Real Estate / Elite Sales</option>
+            <option>Author / Thought Leader</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div><label class="block text-sm font-medium mb-2">Revenue Bracket</label>
+          <select>
+            <option value="">Select one...</option>
+            <option>Under AED 1M</option>
+            <option>AED 1M - 5M</option>
+            <option>AED 5M - 20M</option>
+            <option>AED 20M+</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+        <div><label class="block text-sm font-medium mb-2">Main goal for your Digital AI Twin</label><textarea rows="3" placeholder="What do you want to achieve?"></textarea></div>
+        <div><label class="block text-sm font-medium mb-2">When would you like to start?</label>
+          <select>
+            <option>This month</option>
+            <option>Next 3 months</option>
+            <option>Just exploring</option>
+          </select>
+        </div>
+        <div class="flex items-start gap-3">
+          <input type="checkbox" id="consent" class="w-5 h-5 mt-0.5" required>
+          <label for="consent" class="text-sm text-slate-400">I consent to AIClone.ae storing my information and contacting me about this service.</label>
+        </div>
+        <button type="submit" class="btn-primary w-full text-center">Submit Application</button>
+        <p class="text-xs text-slate-500 text-center">AIClone.ae accepts limited clients. If we're not the right fit, we'll tell you honestly.</p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 py-12">
+    <div class="mx-auto max-w-6xl px-4 lg:px-6">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <div class="h-8 w-8 rounded-lg bg-gradient-to-tr from-softgold to-amber-200 flex items-center justify-center"><span class="text-sm font-bold text-obsidian">AI</span></div>
+            <span class="font-semibold">AIClone.ae</span>
+          </div>
+          <p class="text-sm text-slate-400">72-hour Digital AI Twins for Dubai founders and CEOs.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="#offer" class="hover:text-softgold transition">Offer</a></li>
+            <li><a href="#process" class="hover:text-softgold transition">72-Hour Process</a></li>
+            <li><a href="#pricing" class="hover:text-softgold transition">Pricing</a></li>
+            <li><a href="#founder" class="hover:text-softgold transition">Founder</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Trust & Legal</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="#" class="hover:text-softgold transition">Confidentiality</a></li>
+            <li><a href="#" class="hover:text-softgold transition">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-softgold transition">Avatar Rights</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Contact</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li>Dubai, UAE</li>
+            <li><a href="mailto:hello@aiclone.ae" class="hover:text-softgold transition">hello@aiclone.ae</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-800 pt-6 text-center text-sm text-slate-500">
+        <p>&copy; 2025 AIClone.ae. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    // Scroll fade-in animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    // FAQ accordions
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('[data-lucide="chevron-down"]');
+        content.classList.toggle('active');
+        icon.style.transform = content.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0)';
+      });
+    });
+  </script>
+</body>
+</html>
