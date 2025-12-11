@@ -35,3 +35,9 @@ Version 1.2:
 - Added 'sitemap.xml' and injected JSON-LD Schema Markup
 - Updated navigation links to be extension-less
 - Switched Founder image to .webp format for performance
+
+Version 1.3:
+- Renamed 'index.html' (previously 'home-page.html') to 'home.html'
+- Updated all internal navigation and footer links to point to 'home'
+- Updated .htaccess DirectoryIndex to 'home.html'
+- Changed 'Submit Application' button text to 'Join Waitlist' in apply.html
