@@ -4,14 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply for Your Digital AI Twin | AIClone.ae</title>
+    <title>Non-Disclosure Agreement | AIClone.ae</title>
     <meta name="description"
-        content="Apply for your 72-hour Digital AI Twin experience. Limited availability — one client per block.">
+        content="Sign the Non-Disclosure Agreement (NDA) to proceed with your Digital AI Twin consultation.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .nda-content {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--slate-800);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            max-height: 400px;
+            overflow-y: auto;
+            color: var(--slate-300);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .nda-content h3 {
+            color: var(--soft-gold);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .nda-content p {
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -60,47 +85,78 @@
         <section class="hero" style="padding-bottom: 2rem;">
             <div class="hero-bg"></div>
             <div class="container text-center fade-in">
-                <p class="hero-eyebrow">Limited Availability</p>
-                <h1 class="hero-title" style="font-size: 2.5rem;">Apply for your <span class="gradient-text">Digital AI
-                        Twin</span></h1>
+                <p class="hero-eyebrow">Confidentiality</p>
+                <h1 class="hero-title" style="font-size: 2.5rem;">Mutual <span class="gradient-text">Non-Disclosure
+                        Agreement</span></h1>
                 <p class="hero-subtitle mx-auto" style="max-width: 36rem;">
-                    One client per 72-hour block. Enter your details to start the conversation.
+                    Please read and sign this NDA to proceed with our confidential discussions regarding your Digital AI
+                    Twin.
                 </p>
             </div>
         </section>
 
-        <!-- APPLICATION FORM -->
+        <!-- NDA FORM SECTION -->
         <section class="section" style="padding-top: 2rem;">
             <div class="container">
                 <div class="grid grid-2 gap-8" style="align-items: start;">
-                    <!-- FORM -->
+
+                    <!-- NDA DOCUMENT -->
+                    <div class="fade-in">
+                        <div class="nda-content">
+                            <h2 style="color:white; margin-bottom:1rem; text-align:center;">NON-DISCLOSURE AGREEMENT
+                            </h2>
+
+                            <p><strong>This NON-DISCLOSURE AGREEMENT ("Agreement")</strong> is entered into by and
+                                between <strong>AIClone.ae</strong> ("Disclosing Party") and the undersigned individual
+                                or entity ("Receiving Party").</p>
+
+                            <h3>1. Purpose</h3>
+                            <p>The Disclosing Party may disclose certain confidential and proprietary information to the
+                                Receiving Party for the purpose of exploring a potential business relationship,
+                                specifically regarding the "72-Hour Digital AI Twin" services (the "Purpose").</p>
+
+                            <h3>2. Confidential Information</h3>
+                            <p>"Confidential Information" means all non-public information, intellectual property, trade
+                                secrets, business plans, AI training methodologies, voice cloning techniques, and
+                                specific "Brain File" structures disclosed by Disclosing Party.</p>
+
+                            <h3>3. Obligations</h3>
+                            <p>The Receiving Party agrees to:
+                                <br>a. Maintain the confidentiality of the Confidential Information.
+                                <br>b. Not use the Confidential Information for any purpose other than the Purpose.
+                                <br>c. Not disclose the Confidential Information to any third party without prior
+                                written consent.
+                            </p>
+
+                            <h3>4. Term</h3>
+                            <p>This Agreement shall remain in effect for a period of five (5) years from the date of
+                                disclosure.</p>
+
+                            <h3>5. Governing Law</h3>
+                            <p>This Agreement shall be governed by and construed in accordance with the laws of the
+                                Emirate of Dubai, United Arab Emirates.</p>
+                        </div>
+                        <p class="text-slate-400 text-sm">Please review the document carefully before signing.</p>
+                    </div>
+
+                    <!-- SIGNATURE FORM -->
                     <div class="glass fade-in" style="padding: 2rem;">
-                        <form data-validate>
-                            <div class="grid grid-2 gap-4">
-                                <div class="form-group">
-                                    <label class="form-label">First Name *</label>
-                                    <input type="text" class="form-input" placeholder="First Name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Last Name *</label>
-                                    <input type="text" class="form-input" placeholder="Last Name" required>
-                                </div>
+                        <h3 class="mb-6">Digital Signature</h3>
+                        <form data-validate action="#" method="POST"
+                            onsubmit="event.preventDefault(); alert('NDA Signed! We will contact you shortly.');">
+                            <div class="form-group">
+                                <label class="form-label">Full Legal Name *</label>
+                                <input type="text" class="form-input" placeholder="As per ID/Passport" required>
                             </div>
 
                             <div class="form-group">
-                                <label class="form-label">Email *</label>
+                                <label class="form-label">Email Address *</label>
                                 <input type="email" class="form-input" placeholder="you@company.com" required>
                             </div>
 
-                            <div class="grid grid-2 gap-4">
-                                <div class="form-group">
-                                    <label class="form-label">WhatsApp / Phone *</label>
-                                    <input type="tel" class="form-input" placeholder="+971..." required>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Role / Title *</label>
-                                    <input type="text" class="form-input" placeholder="Founder, CEO, Coach..." required>
-                                </div>
+                            <div class="form-group">
+                                <label class="form-label">Company / Organization</label>
+                                <input type="text" class="form-input" placeholder="Optional">
                             </div>
 
                             <div class="form-group" style="margin-bottom: 1.5rem;">
@@ -109,38 +165,27 @@
                                         style="width: 1.25rem; height: 1.25rem; margin-top: 0.1rem; accent-color: var(--soft-gold);"
                                         required>
                                     <span class="text-slate-300" style="font-size: 0.875rem;">
-                                        I consent to AIClone.ae contacting me to discuss this application.
+                                        I have read and agree to the terms of the Non-Disclosure Agreement. I understand
+                                        that my digital signature is legally binding.
                                     </span>
                                 </label>
                             </div>
 
-                            <button type="submit" class="btn btn-primary btn-full">Join Waitlist</button>
-                            <p class="text-slate-500 text-center mt-3" style="font-size: 0.75rem;">
-                                We respect your privacy. No spam, ever.
-                            </p>
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label style="display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer;">
+                                    <input type="checkbox"
+                                        style="width: 1.25rem; height: 1.25rem; margin-top: 0.1rem; accent-color: var(--soft-gold);"
+                                        required>
+                                    <span class="text-slate-300" style="font-size: 0.875rem;">
+                                        I consent to receive a copy of this signed NDA via email.
+                                    </span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">Sign & Submit NDA</button>
                         </form>
                     </div>
 
-                    <!-- SIDEBAR -->
-                    <div class="fade-in">
-                        <div class="glass mb-6" style="padding: 1.5rem;">
-                            <h4 class="gradient-text mb-4">What happens next?</h4>
-                            <ul class="text-slate-300" style="font-size: 0.9rem; list-style: none;">
-                                <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
-                                    <span class="text-gold font-bold">1.</span>
-                                    <span>We review your details immediately</span>
-                                </li>
-                                <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
-                                    <span class="text-gold font-bold">2.</span>
-                                    <span>If eligible, we'll send a booking link for a discovery call</span>
-                                </li>
-                                <li style="display: flex; gap: 0.75rem;">
-                                    <span class="text-gold font-bold">3.</span>
-                                    <span>We'll request further business details before the call</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>

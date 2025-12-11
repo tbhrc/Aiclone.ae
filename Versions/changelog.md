@@ -41,3 +41,11 @@ Version 1.3:
 - Updated all internal navigation and footer links to point to 'home'
 - Updated .htaccess DirectoryIndex to 'home.html'
 - Changed 'Submit Application' button text to 'Join Waitlist' in apply.html
+
+Version 1.4:
+- Created Digital NDA Signing Page 'pages/nda.html' with digital signature form
+- Created Standard NDA Template in 'Docs/AIClone_NDA_Template_v1.md'
+- Added 'Sign NDA' link to global Footer under 'Trust & Legal'
+- Added 'Sign NDA' CTA button to Confidentiality page
+- Added 'Sign NDA' quick-link to Pricing FAQ
+- Updated all pages to include new footer link
