@@ -30,3 +30,8 @@ Version 1.2:
 - Added 'database_setup.sql' for application/lead storage
 - Added 'admin/login.html' dashboard mockup (no-auth for now)
 - Added 'robots.txt' to block admin indexing
+- Fixed broken image link in 'pages/founder.html'
+- Implemented Clean URLs via .htaccess (removed .html extensions)
+- Added 'sitemap.xml' and injected JSON-LD Schema Markup
+- Updated navigation links to be extension-less
+- Switched Founder image to .webp format for performance
